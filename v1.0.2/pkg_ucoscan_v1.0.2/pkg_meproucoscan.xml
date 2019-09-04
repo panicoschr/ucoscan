@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0" method="upgrade">
+<name>MEPRO UcoScan</name>
+<author>MEPRO SOFTWARE SOLUTIONS</author>
+<authorUrl>http://www.mepro.co</authorUrl>
+<creationDate>13-Dec-2016</creationDate>
+<packagename>meproucoscan</packagename>
+<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+<version>1.0.2</version>
+<packager>WWW.MEPRO.CO</packager>
+<packagerurl>WWW.MEPRO.CO</packagerurl>
+<description>MEPRO UcoScan System</description>
+<files folder="packages">
+<file type="component" id="com_ucoscan" >com_ucoscan_v1.0.2.zip</file>
+</files>
+</extension>
+
+

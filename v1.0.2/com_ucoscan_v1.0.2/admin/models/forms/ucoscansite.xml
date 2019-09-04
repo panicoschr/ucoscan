@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+        
+    <field name="image" type="media" directory="com_ucoscan"
+           hide_none="1" label="COM_UCOSCAN_FIELD_IMAGE_LABEL"
+           size="40"
+           description="COM_UCOSCAN_FIELD_IMAGE_DESC" 
+    />
+		
+    <field name="company" type="text" class="inputbox"
+                       size="40" label="COM_UCOSCAN_FIELD_COMPANY_LABEL"
+                       description="COM_UCOSCAN_FIELD_COMPANY_DESC" required="false" />		
+
+    <field
+        name="phone"
+        type="tel"
+        id="phone"
+        description="COM_UCOSCAN_FIELD_PHONE_DESC"
+        filter="string"
+        label="COM_UCOSCAN_FIELD_PHONE_LABEL"
+        size="30"
+        validate="tel"
+    />
+
+    <field name="url" type="text"
+                       description="COM_UCOSCAN_FIELD_URL_DESC"
+                       label="COM_UCOSCAN_FIELD_URL_LABEL"
+                       size="40"
+                       maxlength="255"
+    />
+		
+    
+    <field name="alias" type="text" class="inputbox"
+                       size="40" label="JFIELD_ALIAS_LABEL"
+                       description="COM_UCOSCAN_FIELD_ALIAS_DESC" />
+                
+    
+     <fieldset name="idfields">
+        <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+                       readonly="true" class="readonly"
+                       description="JGLOBAL_FIELD_ID_DESC"/>
+             </fieldset>
+             
+                             
+    <fieldset name="myfields">
+            <field 
+                name="domainandid" 
+                type="Mydomain" 
+                id="iddomainandid"
+                label="COM_UCOSCAN_FIELD_DOMAIN_LABEL" 
+                description="COM_UCOSCAN_FIELD_DOMAIN_DESC"   
+                key_field="id"  value_field="title" 
+            > 
+
+            </field>       
+                  
+
+        <field name="no_of_chars" type="text" default="1" label="COM_UCOSCAN_FIELD_NO_OF_CHARS_LABEL"
+                       readonly="false" class="inputbox"
+                       description="COM_UCOSCAN_FIELD_NO_OF_CHARS_DESC"/>
+  
+<field name="cms_list" label="COM_UCOSCAN_FIELD_CMS_LIST_LABEL" 
+       desc="COM_UCOSCAN_FIELD_CMS_LIST_DESC" type="checkboxes">
+    <option value="Wordpress">Wordpress</option>    
+    <option value="Drupal">Drupal</option>    
+    <option value="Joomla">Joomla</option>
+    <option value="ExpressionEngine">ExpressionEngine</option> 
+    <option value="WebsiteBaker">WebsiteBaker</option>
+    <option value="phpBB">phpBB</option>    
+    
+    
+   
+</field>                                                                   
+
+<field name="cms_list_all" type="list" default="" label="Publishing" 
+       description="Choose to Keep all constructed urls after publishing or delete the ones without a CMS">
+  <option value="all">Keep All Urls</option>
+  <option value="os">Keep only CMS Urls</option>
+</field>		
+    </fieldset>
+    
+    
+    
+    <fieldset name="editfields">
+
+
+
+      <field name="url" type="text"
+                       description="COM_UCOSCAN_FIELD_URL_DESC"
+                       label="COM_UCOSCAN_FIELD_URL_LABEL"
+                       size="40"
+                       maxlength="255"
+    />
+      
+  <field name="detecteucoscan" type="text"
+                       description="COM_UCOSCAN_FIELD_DETECTEUCOSCAN_DESC"
+                       label="COM_UCOSCAN_FIELD_DETECTEUCOSCAN_LABEL"
+                       size="40"
+                       maxlength="255"
+    />
+      
+      
+    <field name="description" type="textarea" class="inputbox"
+                       rows="3" cols="30" label="JGLOBAL_DESCRIPTION"
+                       description="COM_UCOSCAN_FIELD_DESCRIPTION_DESC" />	         
+
+
+    
+               
+ 		
+
+
+		
+    </fieldset>    
+    
+    
+      <fieldset name="catstatefields">
+          
+ <field name="catid" type="sql"  
+             label="COM_UCOSCAN_FIELD_CATID_LABEL" 
+             description="COM_UCOSCAN_FIELD_CATID_DESC"
+               query="Select id as catid, title  from #__categories where extension = 'com_ucoscan' and title = 'Ucoscansites'"  
+               key_field="catid"  value_field="title" required="true" 
+               > 
+    
+            
+  </field>        		
+
+   </fieldset>    
+  
+    
+    
+    
+    <fields name="metadata">
+        <fieldset name="jmetadata" label="JGLOBAL_FIELDSET_METADATA_OPTIONS">
+            <field name="tags" type="tag"
+                               label="JTAG" description="JTAG_DESC"
+                               class="inputbox" multiple="true"
+            >
+            </field>
+        </fieldset>
+    </fields>	
+</form>

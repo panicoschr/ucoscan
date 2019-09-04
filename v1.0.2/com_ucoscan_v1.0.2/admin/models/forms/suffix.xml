@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    
+					
+    
+    <field
+        name="datetime_from"
+        id="iddatetimefrom_lbl"
+        default=" "
+        required="false"
+        type="calendar"
+        class="inputbox"
+        label="COM_UCOSCAN_EMPLOYEE_ACCRUALS_FIELD_DATE_FROM_LABEL"
+        description="COM_UCOSCAN_EMPLOYEE_ACCRUALS_FIELD_DATE_FROM_DESC"
+        readonly="false"
+        size="19"
+        filter="user_utc"
+    />
+     
+     
+    <field
+        name="datetime_to"
+        id="iddatetimeto_lbl"
+        default=" "
+        required="false"
+        type="calendar"
+        class="inputbox"
+        label="COM_UCOSCAN_EMPLOYEE_ACCRUALS_FIELD_DATE_TO_LABEL"
+        description="COM_UCOSCAN_EMPLOYEE_ACCRUALS_FIELD_DATE_TO_DESC"
+        readonly="false"
+        size="19"
+        filter="user_utc"
+    /> 
+        
+    <field name="image" type="media" directory="com_ucoscan"
+           hide_none="1" label="COM_UCOSCAN_FIELD_IMAGE_LABEL"
+           size="40"
+           description="COM_UCOSCAN_FIELD_IMAGE_DESC" 
+    />
+		
+    <field name="company" type="text" class="inputbox"
+                       size="40" label="COM_UCOSCAN_FIELD_COMPANY_LABEL"
+                       description="COM_UCOSCAN_FIELD_COMPANY_DESC" required="false" />		
+
+    <field
+        name="phone"
+        type="tel"
+        id="phone"
+        description="COM_UCOSCAN_FIELD_PHONE_DESC"
+        filter="string"
+        label="COM_UCOSCAN_FIELD_PHONE_LABEL"
+        size="30"
+        validate="tel"
+    />
+
+    <field name="url" type="text"
+                       description="COM_UCOSCAN_FIELD_URL_DESC"
+                       label="COM_UCOSCAN_FIELD_URL_LABEL"
+                       size="40"
+                       maxlength="255"
+    />
+		
+    <field name="description" type="textarea" class="inputbox"
+                       rows="3" cols="30" label="JGLOBAL_DESCRIPTION"
+                       description="COM_UCOSCAN_FIELD_DESCRIPTION_DESC" />	
+      
+    
+    <field name="alias" type="text" class="inputbox"
+                       size="40" label="JFIELD_ALIAS_LABEL"
+                       description="COM_UCOSCAN_FIELD_ALIAS_DESC" />
+                
+
+                
+    <fieldset name="myfields">
+        <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+                       readonly="true" class="readonly"
+                       description="JGLOBAL_FIELD_ID_DESC"/>
+
+
+
+                  
+
+  
+ <field name="title" type="text"
+                       description="COM_UCOSCAN_FIELD_SUFFIX_DESC"
+                       label="COM_UCOSCAN_FIELD_SUFFIX_LABEL"
+                       size="40"
+                       
+    />
+  
+             
+
+    
+      <field name="catid" type="sql"  
+             label="COM_UCOSCAN_FIELD_CATID_LABEL" 
+             description="COM_UCOSCAN_FIELD_CATID_DESC"
+               query="Select id as catid, title  from #__categories where extension = 'com_ucoscan' and title = 'Suffixes'"  
+               key_field="catid"  value_field="title" required="true" 
+               > 
+    
+            
+  </field>                 
+    
+     
+                      
+                                                                
+                                                                                                                                
+
+		
+        <field name="state" type="list"
+                       label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
+                       class="inputbox small" size="1" default="1" >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+
+		
+    </fieldset>
+    <fields name="metadata">
+        <fieldset name="jmetadata" label="JGLOBAL_FIELDSET_METADATA_OPTIONS">
+            <field name="tags" type="tag"
+                               label="JTAG" description="JTAG_DESC"
+                               class="inputbox" multiple="true"
+            >
+            </field>
+        </fieldset>
+    </fields>	
+</form>

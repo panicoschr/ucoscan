@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.4" method="upgrade" >
+
+    <name>com_ucoscan</name>
+    <!-- The following elements are optional and free of formatting conttraints -->
+    <creationDate>13-Dec-2016</creationDate>
+    <author>MEPRO SOFTWARE SOLUTIONS</author>
+    <authorEmail>info@mepro.co</authorEmail>
+    <authorUrl>http://www.mepro.co</authorUrl>
+    <copyright>WWW.MEPRO.CO - All rights reserved.</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <!--  The version string is recorded in the components table -->
+    <version>1.0.2</version>
+    <description>UCOSCAN</description>
+
+ 
+    <scriptfile>script.php</scriptfile>
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+			
+        </sql>
+    </uninstall>
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+
+        </schemas>
+    </update>
+    	<files folder="site">
+		<filename>index.html</filename>
+		<filename>controller.php</filename>
+		<filename>ucoscan.php</filename>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	
+
+    <media destination="com_ucoscan" folder="media">
+        <filename>index.html</filename>
+        <folder>images</folder>
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>	
+    <administration>
+
+   
+                
+                  
+        <menu img="class:generic">com_ucoscan</menu>
+        <submenu>
+            <menu link="option=com_ucoscan&amp;view=suffixes" img="class:generic"  alt="Ucoscan/Suffixes">COM_UCOSCAN_SUBMENU_SUFFIXES</menu> 
+            <menu link="option=com_ucoscan&amp;view=domains" img="class:generic"  alt="Ucoscan/Domains">COM_UCOSCAN_SUBMENU_DOMAINS</menu>
+            <menu link="option=com_ucoscan&amp;view=ucoscansites" img="class:generic"  alt="Ucoscan/Ucoscansites">COM_UCOSCAN_SUBMENU_SITES</menu>
+            <menu link="option=com_categories&amp;extension=com_ucoscan"
+                  view="categories" img="class:categories" alt="Ucoscan/Categories">COM_UCOSCAN_SUBMENU_CATEGORIES</menu>		
+        </submenu>                                              
+                
+	
+        <files folder="admin">
+            <filename>index.html</filename>
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>ucoscan.php</filename>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+ 
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB/en-GB.com_ucoscan.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_ucoscan.sys.ini</language>
+        </languages>
+    </administration>
+	<updateservers>
+		<server type="extension" priority="1" name="MEPRO Ucoscan">http://updates.mepro.co/muscore.xml</server>
+	</updateservers>         
+</extension>

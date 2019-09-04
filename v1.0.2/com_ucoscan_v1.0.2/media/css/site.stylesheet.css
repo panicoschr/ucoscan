@@ -1,0 +1,14 @@
+.position_title{
+	color: #555555;
+	font-family: 'Titillium Maps',Arial;
+	font-size: 14pt;
+}
+.myposition{
+	padding-bottom: 20px;
+	float: left;
+	padding-right: 20px;
+}
+.position_element{
+	width: 150px;
+	padding-top: 2px;
+}
